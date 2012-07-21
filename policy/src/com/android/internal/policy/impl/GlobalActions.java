@@ -227,26 +227,26 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
                 }
             });
 
-        // next: reboot	
-        mItems.add(	
-               new SinglePressAction(
-                       com.android.internal.R.drawable.ic_lock_reboot,
-                       com.android.internal.R.string.reboot) {
+        // next: reboot
+        mItems.add(
+                new SinglePressAction(
+                        com.android.internal.R.drawable.ic_lock_reboot,
+                        com.android.internal.R.string.reboot) {
 
-                   @Override
-                   public boolean showDuringKeyguard() {
-                       return true;
-                   }
+                    @Override
+                    public boolean showDuringKeyguard() {
+                        return true;
+                    }
 
-                   @Override
-                   public boolean showBeforeProvisioning() {
-                       return true;
-                   }
+                    @Override
+                    public boolean showBeforeProvisioning() {
+                        return true;
+                    }
 
-                   @Override
-                   public void onPress() {
-                       createRebootDialog().show();
-                   }
+                    @Override
+                    public void onPress() {
+                        createRebootDialog().show();
+                    }
                 });
 
         // next: airplane mode
